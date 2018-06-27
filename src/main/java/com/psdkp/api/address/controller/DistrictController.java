@@ -5,6 +5,7 @@ import com.psdkp.api.address.domain.Input;
 import com.psdkp.api.address.service.address.impl.DistrictServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -18,7 +19,7 @@ public class DistrictController {
     public Object getFindByName(
             @RequestParam(defaultValue = "", required = false) String name,
             @RequestParam(defaultValue = "", required = false) Integer id,
-            Pageable pageable
+            @PageableDefault(sort = { "id" }, value = 5000) Pageable pageable
     ) {
         if (id != null) {
             return districtService.findById(id);
