@@ -19,7 +19,7 @@ public class ProvinceController {
     public Object getFindByName(
             @RequestParam(defaultValue = "", required = false) String name,
             @RequestParam(defaultValue = "", required = false) Integer id,
-            @PageableDefault (sort = { "id" }, value = 50) Pageable pageable
+            @PageableDefault (sort = { "id" }, value = 35) Pageable pageable
     ){
         if (id!=null){
             return provinceService.findById(id);

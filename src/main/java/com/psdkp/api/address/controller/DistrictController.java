@@ -19,7 +19,7 @@ public class DistrictController {
     public Object getFindByName(
             @RequestParam(defaultValue = "", required = false) String name,
             @RequestParam(defaultValue = "", required = false) Integer id,
-            @PageableDefault(sort = { "id" }, value = 5000) Pageable pageable
+            @PageableDefault(sort = { "id" }, value = 7100) Pageable pageable
     ) {
         if (id != null) {
             return districtService.findById(id);

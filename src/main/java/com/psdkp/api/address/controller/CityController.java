@@ -19,7 +19,7 @@ public class CityController{
     public Object getFindByName(
             @RequestParam(defaultValue = "", required = false) String name,
             @RequestParam(defaultValue = "", required = false) Integer id,
-            @PageableDefault(sort = { "id" }, value = 3000) Pageable pageable
+            @PageableDefault(sort = { "id" }, value = 520) Pageable pageable
     ){
         if (id!=null){
             return cityService.findById(id);
